@@ -43,7 +43,6 @@ public:
 	scanner(DWORD proccesid);
 	~scanner();
 	void scanstring(std::string stringtofind);
-	void showallstrings();
 	void cleanstrings();
 private:
 	void debug(std::string printthatshit);
