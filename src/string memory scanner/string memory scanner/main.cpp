@@ -15,6 +15,7 @@ int main()
 		std::cout << "string " << stringtofind << " found at address " << std::hex << addressaddress << std::dec << " count [" << count << "] \n";
 	}
 	std::cout << count << " strings found";
+	
 	std::cin.get();
 	
 }
