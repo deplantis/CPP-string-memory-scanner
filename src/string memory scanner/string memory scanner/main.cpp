@@ -1,10 +1,10 @@
-nclude "..\string memory scanner\scanner\scanner.h"
+#include "..\string memory scanner\scanner\scanner.h"
 
 int main()
 {
 	
-	scanner scanscan(6372); // procress id
 	std::string stringtofind = "cat"; // the string that need to be founded
+	scanner scanscan(6372); // procress id
 	scanscan.scanstring(stringtofind); 
 
 	// loop all addreses that the scanner found
