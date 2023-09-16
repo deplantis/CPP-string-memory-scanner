@@ -8,10 +8,10 @@ scanner::scanner(DWORD proccesid)
 
 scanner::~scanner()
 {
-	CloseHandle(hProcess); // close handle
+	CloseHandle(hProcess); 
 }
 
-void scanner::scanstring(std::string stringtofind)
+void scanner::scanstring(std::string& stringtofind)
 {
 	while (currentmemorypage < si.lpMaximumApplicationAddress)
 	{
@@ -58,16 +58,6 @@ void scanner::scanstring(std::string stringtofind)
 	}
 
 	currentmemorypage = 0;
-
-	// show all
-	int count = 0;
-	for (auto& looploop : addres)
-	{
-		count++;
-		std::cout << "string " << stringtofind << " found at address " << std::hex << looploop << std::dec << " count [" << count << "] \n";
-	}
-	std::cout << count << " strings found";
-;
 }
 
 void scanner::cleanstrings()
@@ -88,10 +78,14 @@ void scanner::cleanstrings()
 	}
 }
 
-
 void scanner::debug(std::string printthatshit)
 {
 #ifdef yes
 	std::cout << printthatshit << "\n";
 #endif 
+}
+
+std::vector<uintptr_t> scanner::returnaddreses()
+{
+	return addres;
 }
