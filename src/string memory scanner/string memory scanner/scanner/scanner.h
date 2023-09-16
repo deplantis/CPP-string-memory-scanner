@@ -42,8 +42,9 @@ class scanner
 public:
 	scanner(DWORD proccesid);
 	~scanner();
-	void scanstring(std::string stringtofind);
+	void scanstring(std::string& stringtofind);
 	void cleanstrings();
+	std::vector<uintptr_t> returnaddreses();
 private:
 	void debug(std::string printthatshit);
 private:
