@@ -1,5 +1,5 @@
 # C++ string memory scanner
-A c++ program that scan / search all strings of the chosen procress target
+A c++ program that scan / search all strings of the chosen process target
 
 # library
 windows library / api https://learn.microsoft.com/en-us/windows/win32/api/
