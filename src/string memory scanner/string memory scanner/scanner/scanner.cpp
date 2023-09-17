@@ -80,7 +80,7 @@ void scanner::cleanstrings()
 
 void scanner::debug(std::string printthatshit)
 {
-#ifdef yes
+#ifdef debug
 	std::cout << printthatshit << "\n";
 #endif 
 }
