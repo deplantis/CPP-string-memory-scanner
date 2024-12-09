@@ -43,7 +43,7 @@ void scanner::scanstring(std::string& stringtofind)
 							addres.push_back((uintptr_t)currentmemorypage + begin);
 						}
 
-							// UNICODE (i did not test this algoritm to the 100%)
+							// UNICODE 
 				stringbuffer.clear();
 
 				for (int copy = 0; copy < (stringtofind.size() * 2); copy = copy + 2)
