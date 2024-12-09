@@ -54,7 +54,6 @@ void scanner::scanstring(std::string& stringtofind)
 				{
 				//	std::cout << "Unicode string found \n";
 					addres.push_back((uintptr_t)currentmemorypage + begin);
-
 				}
 
 					}
