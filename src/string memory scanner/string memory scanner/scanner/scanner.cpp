@@ -43,11 +43,20 @@ void scanner::scanstring(std::string& stringtofind)
 							addres.push_back((uintptr_t)currentmemorypage + begin);
 						}
 
-						// find all strings THAT exactly and exactly look like the string that need to be searched
-						/*if (stringtofind == stringbuffer)
-						{
-							addres.push_back((uintptr_t)currentmemorypage + begin);
-						}*/
+							// UNICODE (i did not test this algoritm to the 100%)
+				stringbuffer.clear();
+
+				for (int copy = 0; copy < (stringtofind.size() * 2); copy = copy + 2)
+				{
+					stringbuffer += buffer[begin + copy];
+				}
+				if (stringtofind == stringbuffer)
+				{
+				//	std::cout << "Unicode string found \n";
+					addres.push_back((uintptr_t)currentmemorypage + begin);
+\
+				}
+
 					}
 
 				}
